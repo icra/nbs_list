@@ -1,6 +1,6 @@
 .Rhistory
 .RData
 .RDataTmp
-./data/.RData
-./rsconnect/
-./rsconnect/*
+data/.RData
+rsconnect/
+rsconnect/*
