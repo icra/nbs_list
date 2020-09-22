@@ -3,3 +3,4 @@
 .RDataTmp
 ./data/.RData
 ./rsconnect/
+./rsconnect/*
