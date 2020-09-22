@@ -1,0 +1,13 @@
+name: nbs-list
+title: nbs-list
+username:
+account: icra
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2619534
+bundleId: 3656044
+url: https://icra.shinyapps.io/nbs-list/
+when: 1600765657.99594
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|.RDataTmp|data/.RData|data/.Rhistory

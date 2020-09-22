@@ -1,0 +1,5 @@
+.Rhistory
+.RData
+.RDataTmp
+./data/.RData
+./rsconnect/
