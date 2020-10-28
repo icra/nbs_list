@@ -18,8 +18,10 @@ grafic <- function(data, xlab, color= "dark green"){
   ggplot(na.omit(data), aes(x=Factor,y=Performance))+
     geom_col(fill=color)+
     coord_polar()+theme_minimal()+
-    theme(plot.title=element_text(hjust=0.5, size=12),
+    theme(plot.title=element_text(size=12, hjust=0.5),
           axis.ticks.y=element_blank(), axis.text.y=element_blank(),
+          axis.text.x = element_text(size=12),
+          axis.title.x = element_text(size=14, face="bold"),
           plot.margin = margin(0,0,0,0, "cm"))+
     xlab(xlab)+ylab("")+
     scale_y_continuous(limits=c(0,1))
@@ -417,8 +419,10 @@ server <- function(input, output) {
           ggplot(na.omit(NBS_top), aes(x=NBS_labels, y=Facet))+
             geom_col(fill="Orange")+
             coord_polar()+theme_minimal()+
-            theme(plot.title=element_text(hjust=0.5, size=12),
+            theme(plot.title=element_text(hjust=0.5, size=20),
                   axis.ticks.y=element_blank(), axis.text.y=element_blank(),
+                  axis.text.x =element_text(size=12),
+                  axis.title.x = element_text(size=14, face="bold"),
                   plot.margin = margin(0,0,0,0, "cm"))+
             xlab(paste("Top ",input$slider, " NBS"))+ylab("")+
             scale_y_continuous(limits=c(0,1))
@@ -441,8 +445,10 @@ server <- function(input, output) {
             ggplot(na.omit(NBS_facet), aes(x=NBS_labels, y=Facet))+
               geom_col(fill="Orange")+
               coord_polar()+theme_minimal()+
-              theme(plot.title=element_text(hjust=0.5, size=12),
+              theme(plot.title=element_text(hjust=0.5, size=20),
                     axis.ticks.y=element_blank(), axis.text.y=element_blank(),
+                    axis.text.x = element_text(size=12),
+                    axis.title.x = element_text(size=14, face="bold"),
                     plot.margin = margin(0,0,0,0, "cm"))+
               xlab("Custom selection")+ylab("")+
               scale_y_continuous(limits=c(0,1))
