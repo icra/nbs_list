@@ -24,7 +24,9 @@ grafic <- function(data, xlab, color= "dark green"){
           axis.title.x = element_text(size=14, face="bold"),
           plot.margin = margin(0,0,0,0, "cm"))+
     xlab(xlab)+ylab("")+
-    scale_y_continuous(limits=c(0,1))
+    scale_y_continuous(limits=c(0,1))#+
+    #geom_text_repel(aes(label = round(Performance,2)), bg.color = "white",
+                    #bg.r = 0.05)
 }
 
 #Prepare data for UC plot
@@ -80,7 +82,7 @@ methodology <- paste("<p><B><center>Methodology</B></center></p>",
               comprehensive list of 32 NBS.</p>',
                              "<p>The performance assessment also came from the assessment of
               the projects mentioned above. </p>",
-                             '<p><center>Click <a href="#">here</a> for more information</center></p>')
+                             '<br><p><center>Click <a href="https://doi.org/10.1016/j.scitotenv.2021.146237">here</a> for more information about methodology and the source citation</center></p>')
 
 ###USER INTERFACE
 ui <- fluidPage(
@@ -465,4 +467,4 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 
 
-                  
+#install.packages("testthat")                  
